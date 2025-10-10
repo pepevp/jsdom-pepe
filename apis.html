@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API de Ejemplo | Mi Sitio</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+  />
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      padding: 2rem 0;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 1rem 0;
+      text-align: center;
+      border-top: 1px solid #dee2e6;
+    }
+    pre {
+      background-color: #f1f3f5;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABECERA / NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Mi Sitio</a>
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="apis.html">API</a></li>
+          <li class="nav-item"><a class="nav-link" href="fetch.html">Fetch</a></li>
+          <li class="nav-item"><a class="nav-link active" href="dom.html">DOM</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container">
+    <h1 class="text-center mb-4">Referencia de la API JSONPlaceholder</h1>
+    <p class="text-center text-muted">
+      <a href="https://jsonplaceholder.typicode.com/" target="_blank">
+        JSONPlaceholder
+      </a>
+      es una API gratuita para realizar pruebas y prototipos de aplicaciones que hacen peticiones HTTP.
+    </p>
+
+    <div class="mt-5">
+      <h3>📘 Recursos principales disponibles</h3>
+      <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item"><code>/posts</code> — Publicaciones</li>
+        <li class="list-group-item"><code>/comments</code> — Comentarios</li>
+        <li class="list-group-item"><code>/albums</code> — Álbumes</li>
+        <li class="list-group-item"><code>/photos</code> — Fotos</li>
+        <li class="list-group-item"><code>/todos</code> — Tareas pendientes</li>
+        <li class="list-group-item"><code>/users</code> — Usuarios</li>
+      </ul>
+
+      <h3>🧩 Ejemplos de peticiones</h3>
+      <p>A continuación se muestran ejemplos de cómo acceder a algunos endpoints:</p>
+
+      <h5>Obtener todas las publicaciones:</h5>
+      <pre><code>GET https://jsonplaceholder.typicode.com/posts</code></pre>
+
+      <h5>Obtener una publicación específica:</h5>
+      <pre><code>GET https://jsonplaceholder.typicode.com/posts/1</code></pre>
+
+      <h5>Obtener los comentarios de una publicación:</h5>
+      <pre><code>GET https://jsonplaceholder.typicode.com/posts/1/comments</code></pre>
+
+      <h5>Obtener información de un usuario:</h5>
+      <pre><code>GET https://jsonplaceholder.typicode.com/users/1</code></pre>
+
+      <h5>Crear una nueva publicación (ejemplo de POST):</h5>
+      <pre><code>POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Mi nueva publicación",
+  "body": "Contenido de prueba",
+  "userId": 1
+}</code></pre>
+
+      <div class="alert alert-info mt-4" role="alert">
+        ⚠️ <strong>Nota:</strong> Aunque puedes enviar peticiones <code>POST</code>, 
+        <code>PUT</code> y <code>DELETE</code>, los datos no se guardan realmente 
+        (es una API de prueba).
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">
+        &copy; 2025 Mi Sitio Web — Página de referencia de API.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
